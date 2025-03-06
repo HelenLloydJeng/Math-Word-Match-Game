@@ -91,16 +91,6 @@ This project is an **interactive learning game** that helps users match numbers 
 - Themed designs (e.g., fun fonts & styles).  
 
 ---
-
-## 🚀 Next Steps  
-1. Build the **basic HTML structure**.  
-2. Implement **JavaScript logic** for matching pairs.  
-3. Style the game for **mobile and desktop**.  
-4. Test and **fix bugs** before deployment.  
-5. Deploy to **GitHub Pages** and finalize README.  
-
----
-
 ## 🛠 Technologies Used  
 - HTML5  
 - CSS3  
@@ -108,6 +98,10 @@ This project is an **interactive learning game** that helps users match numbers 
 - Git & GitHub Pages  
 
 ---
+## Testing
+TDD
+
+
 
 ## 📌 Deployment  
 The game will be deployed on **GitHub Pages**. Follow these steps to run it locally:  

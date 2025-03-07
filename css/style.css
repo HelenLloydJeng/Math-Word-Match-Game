@@ -47,11 +47,6 @@ h2 {
 }
 
 button {
- /* font-size: 18px;
-  padding: 10px;
-  min-width: 80px;
-  border-radius: 5px; */
-
   font-size: 1.5rem;
     font-weight: bold;
     padding: 15px 20px;
@@ -72,4 +67,34 @@ button {
 #word-buttons button {
   margin: 5px;
 }
+
+/* Custom styling for the success popup */
+.custom-success-popup {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A) !important; /* Green gradient */
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+/* Custom styling for the error popup */
+.custom-error-popup {
+  background: linear-gradient(135deg, #FF3D00, #FF6D00) !important; /* Red gradient */
+  color: white !important;
+  border-radius: 20px !important;
+}
+
+/* Custom styling for the text inside the popups */
+.custom-popup-title {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  font-family: 'Comic Sans MS', cursive !important;
+}
+
+.custom-popup-button {
+  background: #ffcc00 !important;
+  color: #333 !important;
+  font-size: 1.2rem !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+}
+
 

@@ -74,24 +74,35 @@ function setChoices(element) {
     }
 }
 
-function checkChoices() {
+function checkChoices() { 
     if (choiceOne === choiceTwo) {
         Swal.fire({
-            position: "center",
+            position: "top",
             icon: "success",
             title: "Correct!",
             showConfirmButton: true,
+            customClass: {
+                popup: "custom-success-popup",
+                title: "custom-popup-title",
+                confirmButton: "custom-popup-button"
+            }
+                     
           }).then(() => resetGame());
     } else {
         Swal.fire({
-            position: "center",
+            position: "top",
             icon: "error",
             title: "You're wrong",
             showConfirmButton: true,
-          }).then(() => resetGame());
+            customClass: {
+                popup: "custom-error-popup",
+                title: "custom-popup-title",
+                confirmButton: "custom-popup-button"
+            }
+           
+                     }).then(() => resetGame());
     }
 }
-
 function resetGame() {
     choiceOneElement.classList.remove('clicked')
     choiceTwoElement.classList.remove('clicked')

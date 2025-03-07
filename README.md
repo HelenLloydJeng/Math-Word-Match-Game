@@ -124,7 +124,7 @@ This project is an **interactive learning game** that helps users match numbers 
 
 ---
 
-## 🔴 Issue 23: Styling Lost After HTML Changes  
+## 🔴 Issue 3: Styling Lost After HTML Changes  
 ### **Problem**  
 - After modifying the **HTML** to fix button alignment, **all styling changed unexpectedly**.  
 
@@ -141,7 +141,7 @@ This project is an **interactive learning game** that helps users match numbers 
 
 --4
 
-## 🔴 Issue 3: Button Colors & Borders Not Matching  
+## 🔴 Issue 4: Button Colors & Borders Not Matching  
 ### **Problem**  
 - The `Start` and `Score` buttons did **not have the same color** after Bootstrap was reapplied.  
 - Borders appeared around the buttons due to Bootstrap’s default styling.  
@@ -157,6 +157,17 @@ This project is an **interactive learning game** that helps users match numbers 
 ### **Final Verification**  
 ✅ Buttons now **match in color and styling**.  
 ✅ Borders are **removed** for a clean look.  
+
+
+### **Issue 5:**  
+The score was increasing correctly but did not reset to `0` when starting a new game.  
+
+### **Testing:**  
+Clicked the **Start** button multiple times and confirmed the score persisted instead of resetting.  
+
+### **Fix:**  
+Updated `resetGame(true)` to reset `score = 0` and update the UI, then ensured the **Start** button calls `resetGame(true)`. 🚀  
+
 
 ## 📌 Deployment  
 The game will be deployed on **GitHub Pages**. Follow these steps to run it locally:  

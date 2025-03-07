@@ -31,6 +31,8 @@ let choiceOneElement;
 let choiceTwoElement;
 // Initialize score variable
 let score = 0;
+let gameStarted = false; // Track if the game is running
+
 
 // Function to create buttons
 function createButtons(containerId, values, type) {
@@ -53,7 +55,7 @@ function createButtons(containerId, values, type) {
     });
   });
 
-  // Shuffle the elements array
+    // Shuffle the elements array
   for (let i = elements.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [elements[i], elements[j]] = [elements[j], elements[i]];
@@ -129,14 +131,25 @@ function updateScore(points) {
   document.getElementById("score").textContent = score; // Update UI
 }
 
-function resetGame() {
-  choiceOneElement.classList.remove("clicked");
-  choiceTwoElement.classList.remove("clicked");
+// Reset the game
+function resetGame(isNewGame = false) {
+  if (choiceOneElement) choiceOneElement.classList.remove("clicked");
+  if (choiceTwoElement) choiceTwoElement.classList.remove("clicked");
   choiceOne = null;
   choiceTwo = null;
   choiceOneElement = null;
   choiceTwoElement = null;
+
+  if (isNewGame) {
+    // Reset score to 0 when restarting the game
+    score = 0;
+    document.getElementById("score").textContent = score; // Update UI
+  }
 }
+
+document.getElementById("start-restart").addEventListener("click", function () {
+  resetGame(true); // Pass 'true' to reset the score
+});
 
 // Generate number and word buttons
 createButtons("number-buttons", numbers, "number");

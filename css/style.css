@@ -3,11 +3,12 @@ body {
   font-family: "Poppins", sans-serif; /* You can replace with 'Comic Sans MS' for a playful look */
   background: linear-gradient(
     135deg,
-    #ffd700,
+    hwb(46 0% 0%),
     #ff6347,
-    #45a7ce
+    #0a0771
   ); /* Gold, red, and blue */
   text-align: center;
+  font-weight: bold;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -66,32 +67,32 @@ body {
 
 
 text {
-  color: rgb(7, 47, 47);
+  color: rgb(3, 19, 19);
 }
 
-h1 {
+h2 {
   color: #26095f; /* Purple color */
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
 
-  text-shadow: 3px 3px 0px #fff, 6px 6px 0px #ff6347; /* Cool shadow effect */
+ 
 }
 
-h2 {
-  color: #007bff;
+h3 {
+  color: #092d53;
   font-size: 2rem;
-  text-decoration: underline;
+ 
 }
 
 button {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   padding: 15px 20px;
   min-width: 100px;
      border-radius: 50px !important;  /* Rounded Shape */
   background: #ffcc00 !important;  /* Bright Yellow */
-  color: #333;
+  color: #481b73;
   border: none !important;
   transition: all 0.3s ease-in-out;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
@@ -103,8 +104,11 @@ button {
 
 #number-buttons button,
 #word-buttons button {
-  margin: 5px;
+  margin: 10px;
+ color: #000 !important; /* Makes text black for better contrast */
+  font-weight: bold; /* Makes text bolder */
 }
+
 
 /* Custom styling for the success popup */
 .custom-success-popup {

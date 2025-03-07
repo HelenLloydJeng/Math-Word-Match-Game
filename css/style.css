@@ -47,17 +47,29 @@ h2 {
 }
 
 button {
-  font-size: 18px;
+ /* font-size: 18px;
   padding: 10px;
   min-width: 80px;
-  border-radius: 5px;
+  border-radius: 5px; */
+
+  font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    min-width: 120px;
+    border-radius: 50px;
+    background: #ffcc00; /* Yellow */
+    color: #333;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .clicked {
-  background-color: #ef76bb;
+  background-color: #7692ef;
 }
 
 #number-buttons button,
 #word-buttons button {
   margin: 5px;
 }
+

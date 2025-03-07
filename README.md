@@ -99,7 +99,6 @@ This project is an **interactive learning game** that helps users match numbers 
 
 ---
 ## Testing
-TDD
 
 ## Bugs Fixes
 
@@ -107,6 +106,57 @@ TDD
 ⚒️ - The `position: "center"` setting in SweetAlert was affecting the page layout.  
 ✅ - Changed the position to `"top"` to prevent it from interfering with the game elements.  
 
+
+## 🔴 Issue 2: Score Button Stacked Below Start Button  
+### **Problem**  
+- After adding the **Score** button, it appeared **below** the **Start** button instead of beside it.  
+- The layout was not as expected.  
+
+### **Testing Process**  
+1. Added a **red border** around the buttons to check their position.  
+2. Discovered that both buttons were **outside** the intended container.  
+
+### **Fix Implemented**  
+- Adjusted the **HTML structure** to ensure both buttons were inside the correct Bootstrap grid layout.  
+
+### **Final Verification**  
+✅ The `Start` and `Score` buttons are now **side by side**.  
+
+---
+
+## 🔴 Issue 23: Styling Lost After HTML Changes  
+### **Problem**  
+- After modifying the **HTML** to fix button alignment, **all styling changed unexpectedly**.  
+
+### **Testing Process**  
+1. Inspected the **CSS** to check if the styles were still being applied.  
+2. Verified the **Bootstrap** integration to ensure it was still loading.  
+
+### **Fix Implemented**  
+- Reapplied the **Bootstrap CDN** to ensure styles were not missing.  
+- Checked **CSS file order** to make sure custom styles loaded **after Bootstrap**.  
+
+### **Final Verification**  
+✅ Bootstrap styles were **restored** and applied correctly.  
+
+--4
+
+## 🔴 Issue 3: Button Colors & Borders Not Matching  
+### **Problem**  
+- The `Start` and `Score` buttons did **not have the same color** after Bootstrap was reapplied.  
+- Borders appeared around the buttons due to Bootstrap’s default styling.  
+
+### **Testing Process**  
+1. Manually set the **background color** to check if the CSS was working.  
+2. Used **DevTools** to inspect and identify Bootstrap overrides.  
+
+### **Fix Implemented**  
+- Used `!important` in CSS to **override Bootstrap styles**.  
+- Removed unwanted **borders** applied by Bootstrap.  
+
+### **Final Verification**  
+✅ Buttons now **match in color and styling**.  
+✅ Borders are **removed** for a clean look.  
 
 ## 📌 Deployment  
 The game will be deployed on **GitHub Pages**. Follow these steps to run it locally:  

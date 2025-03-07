@@ -15,11 +15,19 @@ h1  {
     text-align: center;
 }
 
+
+
+
 button {
     font-size: 18px;
     padding: 10px;
     min-width: 80px;
     border-radius: 5px;
+}
+
+.clicked {
+    background-color: #ef76bb;
+   
 }
 
 #number-buttons button, 

@@ -101,6 +101,11 @@ This project is an **interactive learning game** that helps users match numbers 
 ## Testing
 TDD
 
+## Bugs Fixes
+
+🐞 - The SweetAlert popup was shifting the game buttons, causing them to disappear or move.  
+⚒️ - The `position: "center"` setting in SweetAlert was affecting the page layout.  
+✅ - Changed the position to `"top"` to prevent it from interfering with the game elements.  
 
 
 ## 📌 Deployment  

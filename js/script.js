@@ -13,6 +13,8 @@ let choiceOne;
 let choiceTwo;
 let choiceOneElement;
 let choiceTwoElement;
+// Initialize score variable
+let score = 0;
 
 
 // Function to create buttons
@@ -76,7 +78,7 @@ function setChoices(element) {
 
 function checkChoices() { 
     if (choiceOne === choiceTwo) {
-        Swal.fire({
+            Swal.fire({
             position: "top",
             icon: "success",
             title: "Correct!",

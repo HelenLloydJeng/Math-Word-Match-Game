@@ -17,15 +17,53 @@ body {
 
 .container {
   background: none;
-  padding: 20px; /* Keeps spacing without the box */
+  padding: 10px 20px; /* Keeps spacing without the box */
   text-align: center;
   border-radius: 50px; /* Soft, rounded shape */
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 120px;
   width: 80%;
   max-width: 1000px;
   margin: auto;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px); /* Gives a glassy effect */
+ backdrop-filter: blur(10px); /* Gives a glassy effect */ 
+
 }
+/* ✅ Start Button */
+#start-restart {
+  background: #ffcc00 !important;  /* Override Bootstrap */
+  border-radius: 50px;
+  border: none !important;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 120px;
+   display: flex;
+   justify-content: center;
+  align-items: center;
+  color: #333;
+  
+}
+#score-container {
+  background: #1bf856 !important; /* Green */
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 120px;
+  cursor: default; /* Makes it non-clickable */
+  display: flex;
+    justify-content: center;
+  align-items: center;
+  color: #333;
+  border: none;
+}
+
+
 
 text {
   color: rgb(7, 47, 47);
@@ -41,26 +79,26 @@ h1 {
 }
 
 h2 {
-  color: #007BFF;
+  color: #007bff;
   font-size: 2rem;
   text-decoration: underline;
 }
 
 button {
   font-size: 1.5rem;
-    font-weight: bold;
-    padding: 15px 20px;
-    min-width: 120px;
-    border-radius: 50px;
-    background: #ffcc00; /* Yellow */
-    color: #333;
-    border: none;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  padding: 15px 20px;
+  min-width: 100px;
+     border-radius: 50px !important;  /* Rounded Shape */
+  background: #ffcc00 !important;  /* Bright Yellow */
+  color: #333;
+  border: none !important;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .clicked {
-  background-color: #7692ef;
+  background-color: #7692ef !important;
 }
 
 #number-buttons button,
@@ -70,14 +108,22 @@ button {
 
 /* Custom styling for the success popup */
 .custom-success-popup {
-  background: linear-gradient(135deg, #4CAF50, #8BC34A) !important; /* Green gradient */
+  background: linear-gradient(
+    135deg,
+    #4caf50,
+    #8bc34a
+  ) !important; /* Green gradient */
   color: white !important;
   border-radius: 20px !important;
 }
 
 /* Custom styling for the error popup */
 .custom-error-popup {
-  background: linear-gradient(135deg, #FF3D00, #FF6D00) !important; /* Red gradient */
+  background: linear-gradient(
+    135deg,
+    #ff3d00,
+    #ff6d00
+  ) !important; /* Red gradient */
   color: white !important;
   border-radius: 20px !important;
 }
@@ -86,7 +132,7 @@ button {
 .custom-popup-title {
   font-size: 2rem !important;
   font-weight: bold !important;
-  font-family: 'Comic Sans MS', cursive !important;
+  font-family: "Comic Sans MS", cursive !important;
 }
 
 .custom-popup-button {
@@ -96,5 +142,3 @@ button {
   border-radius: 10px !important;
   padding: 10px 20px !important;
 }
-
-

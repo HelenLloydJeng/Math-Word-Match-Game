@@ -1,6 +1,6 @@
 * /* General Styles */
 body {
-  font-family: "Poppins", sans-serif; /* You can replace with 'Comic Sans MS' for a playful look */
+  font-family: "comic neue", sans-serif; /* You can replace with 'Comic Sans MS' for a playful look */
   background: linear-gradient(
     135deg,
     hwb(46 0% 0%),
@@ -28,12 +28,11 @@ body {
   max-width: 1000px;
   margin: auto;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
- backdrop-filter: blur(10px); /* Gives a glassy effect */ 
-
+  backdrop-filter: blur(10px); /* Gives a glassy effect */
 }
 /* ✅ Start Button */
 #start-restart {
-  background: #ffcc00 !important;  /* Override Bootstrap */
+  background: #ffcc00 !important; /* Override Bootstrap */
   border-radius: 50px;
   border: none !important;
   padding: 10px 20px;
@@ -42,11 +41,10 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   min-width: 120px;
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   color: #333;
-  
 }
 #score-container {
   background: #1bf856 !important; /* Green */
@@ -58,13 +56,11 @@ body {
   min-width: 120px;
   cursor: default; /* Makes it non-clickable */
   display: flex;
-    justify-content: center;
+  justify-content: center;
   align-items: center;
   color: #333;
   border: none;
 }
-
-
 
 text {
   color: rgb(3, 19, 19);
@@ -75,14 +71,11 @@ h2 {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-
- 
 }
 
 h3 {
   color: #092d53;
   font-size: 2rem;
- 
 }
 
 button {
@@ -90,8 +83,8 @@ button {
   font-weight: bold;
   padding: 15px 20px;
   min-width: 100px;
-     border-radius: 50px !important;  /* Rounded Shape */
-  background: #ffcc00 !important;  /* Bright Yellow */
+  border-radius: 50px !important; /* Rounded Shape */
+  background: #ffcc00 !important; /* Bright Yellow */
   color: #481b73;
   border: none !important;
   transition: all 0.3s ease-in-out;
@@ -105,10 +98,9 @@ button {
 #number-buttons button,
 #word-buttons button {
   margin: 10px;
- color: #000 !important; /* Makes text black for better contrast */
+  color: #000 !important; /* Makes text black for better contrast */
   font-weight: bold; /* Makes text bolder */
 }
-
 
 /* Custom styling for the success popup */
 .custom-success-popup {
@@ -118,7 +110,9 @@ button {
     #8bc34a
   ) !important; /* Green gradient */
   color: white !important;
-  border-radius: 20px !important;
+  border-radius: 10px !important; /* Smaller rounded corners */
+  padding: 15px !important; /* Reduce padding */
+  width: 250px !important; /* Set a smaller width */
 }
 
 /* Custom styling for the error popup */
@@ -129,20 +123,41 @@ button {
     #ff6d00
   ) !important; /* Red gradient */
   color: white !important;
-  border-radius: 20px !important;
+  border-radius: 10px !important;
+  padding: 15px !important;
+  width: 250px !important;
 }
 
 /* Custom styling for the text inside the popups */
 .custom-popup-title {
-  font-size: 2rem !important;
+  font-size: 1.5rem !important; /* Reduce font size */
   font-weight: bold !important;
-  font-family: "Comic Sans MS", cursive !important;
+  font-family: "Comic Neue", cursive !important;
 }
 
 .custom-popup-button {
   background: #ffcc00 !important;
   color: #333 !important;
-  font-size: 1.2rem !important;
-  border-radius: 10px !important;
-  padding: 10px 20px !important;
+  font-size: 1rem !important; /* Smaller font */
+  border-radius: 8px !important; /* Less rounded */
+  padding: 5px 15px !important; /* Smaller padding */
+}
+
+@keyframes pop-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  } /* Grows 2x bigger */
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  } /* Stays big */
+}
+
+.pop-out {
+  animation: pop-out 1.5s ease-in-out forwards; /* Lasts 1.5 seconds */
 }

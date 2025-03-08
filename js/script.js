@@ -97,6 +97,11 @@ function setChoices(element) {
 
 function checkChoices() {
   if (choiceOne === choiceTwo) {
+
+// Add the pop-out effect to both buttons
+choiceOneElement.classList.add("pop-out");
+choiceTwoElement.classList.add("pop-out");
+
     Swal.fire({
       position: "top",
       icon: "success",
@@ -108,14 +113,22 @@ function checkChoices() {
         confirmButton: "custom-popup-button",
       },
     }).then(() => {
-      updateScore(1); // Increase the score
-      resetGame(); // Reset the game
+     // Remove pop-out effect after animation ends
+   // Keep them big for longer (3 seconds) before resetting
+   setTimeout(() => {
+    choiceOneElement.classList.remove("pop-out");
+    choiceTwoElement.classList.remove("pop-out");
+    updateScore(1); // Increase the score
+    resetGame(); // Reset the game
+  }, 1000); // Wait 1 seconds before resetting
+
+     
     });
   } else {
     Swal.fire({
       position: "top",
       icon: "error",
-      title: "You're wrong",
+      title: "Wrong! Try again.",
       showConfirmButton: true,
       customClass: {
         popup: "custom-error-popup",

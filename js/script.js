@@ -115,7 +115,7 @@ choiceTwoElement.classList.add("pop-out");
       },
     }).then(() => {
      // Remove pop-out effect after animation ends
-   // Keep them big for longer (3 seconds) before resetting
+   // Keep them big for longer (1 seconds) before resetting
    setTimeout(() => {
     choiceOneElement.classList.remove("pop-out");
     choiceTwoElement.classList.remove("pop-out");

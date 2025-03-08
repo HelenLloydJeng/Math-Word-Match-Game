@@ -1,5 +1,6 @@
 // Array for numbers 1 to 20
-const numbers = Array.from({ length: 20 }, (_, i) => i + 1);
+//const numbers = Array.from({ length: 20 }, (_, i) => i + 1);
+const numbers = Array.from({ length: 10}, (_, i) => i + 1);
 
 // Array for number words (1 to 20)
 const numberWords = [
@@ -13,16 +14,16 @@ const numberWords = [
   "Eight",
   "Nine",
   "Ten",
-  "Eleven",
-  "Twelve",
-  "Thirteen",
-  "Fourteen",
-  "Fifteen",
-  "Sixteen",
-  "Seventeen",
-  "Eighteen",
-  "Nineteen",
-  "Twenty",
+ // "Eleven",
+  //"Twelve",
+  //"Thirteen",
+  //"Fourteen",
+  //"Fifteen",
+  //"Sixteen",
+  //"Seventeen",
+  //"Eighteen",
+  //"Nineteen",
+ // "Twenty",
 ];
 
 let choiceOne;

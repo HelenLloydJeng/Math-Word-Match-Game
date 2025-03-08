@@ -100,6 +100,15 @@ button {
   margin: 10px;
   color: #000 !important; /* Makes text black for better contrast */
   font-weight: bold; /* Makes text bolder */
+  font-size: 2rem; /* Bigger text */
+  padding: 10px; /* More padding for easier clicking */
+  width: 120px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  border-radius: 12px; /* Rounded corners */
+  text-align: center; /* Ensure text is centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Custom styling for the success popup */

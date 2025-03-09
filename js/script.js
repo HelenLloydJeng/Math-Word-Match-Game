@@ -1,8 +1,9 @@
-// Array for numbers 1 to 20
-//const numbers = Array.from({ length: 20 }, (_, i) => i + 1);
+/* jshint esversion: 6 */
+// Array for numbers 1 to 10
+//const numbers = Array.from({ length: 10 }, (_, i) => i + 1);
 const numbers = Array.from({ length: 10}, (_, i) => i + 1);
 
-// Array for number words (1 to 20)
+// Array for number words (1 to 10)
 const numberWords = [
   "One",
   "Two",
@@ -14,17 +15,7 @@ const numberWords = [
   "Eight",
   "Nine",
   "Ten",
- // "Eleven",
-  //"Twelve",
-  //"Thirteen",
-  //"Fourteen",
-  //"Fifteen",
-  //"Sixteen",
-  //"Seventeen",
-  //"Eighteen",
-  //"Nineteen",
- // "Twenty",
-];
+ ];
 
 let choiceOne;
 let choiceTwo;
@@ -121,7 +112,7 @@ choiceTwoElement.classList.add("pop-out");
     choiceTwoElement.classList.remove("pop-out");
     updateScore(1); // Increase the score
     resetGame(); // Reset the game
-  }, 1000); // Wait 1 seconds before resetting
+  }, 300); // Wait 1/3 seconds before resetting
 
      
     });
@@ -158,8 +149,11 @@ function resetGame(isNewGame = false) {
     // Reset score to 0 when restarting the game
     score = 0;
     document.getElementById("score").textContent = score; // Update UI
-  }
+    // Change the Start button color on reset
+  
 }
+  }
+
 
 document.getElementById("start-restart").addEventListener("click", function () {
   resetGame(true); // Pass 'true' to reset the score
@@ -167,4 +161,5 @@ document.getElementById("start-restart").addEventListener("click", function () {
 
 // Generate number and word buttons
 createButtons("number-buttons", numbers, "number");
-createButtons("word-buttons", numberWords, "word");
+createButtons("word-buttons", numberWords, "word")
+;

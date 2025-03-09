@@ -17,7 +17,7 @@ This project is an **interactive learning game** that helps users match numbers 
 
 ### 🟢 User Story 1: As a player, I want to match numbers with their word forms  
 **✅ Acceptance Criteria:**  
-- The game displays numbers (1-20) and their word equivalents in a **randomized grid**.  
+- The game displays numbers (1-10) and their word equivalents in a **randomized grid**.  
 - When a player clicks two elements, the game checks if they match.  
 - Correct matches turn **green** and stay visible.  
 - Incorrect matches turn **red** and disappear after 1 second.  
@@ -97,79 +97,107 @@ This project is an **interactive learning game** that helps users match numbers 
 - JavaScript (ES6)  
 - Git & GitHub Pages  
 
+## 🛠️ Testing & Bug Fixes  
+
+### 🐞 Issue 1: SweetAlert Popup Moved Game Buttons  
+- The popup caused buttons to shift or disappear.  
+- `position: "center"` affected layout.  
+- ✅ Changed to `"top"` to prevent interference.  
+
+### 🐞 Issue 2: Score Button Was Below Start Button  
+- Score button stacked incorrectly under Start.  
+- Inspected with a red border and found grid issues.  
+- ✅ Fixed Bootstrap layout to align buttons side by side.  
+
+### 🐞 Issue 3: Styling Lost After HTML Changes  
+- Bootstrap styles disappeared after modifying HTML.  
+- Checked CSS file order and Bootstrap integration.  
+- ✅ Reapplied Bootstrap CDN and reordered styles.  
+
+### 🐞 Issue 4: Button Colors & Borders Not Matching  
+- Start and Score buttons had different colors/borders.  
+- Used DevTools to find Bootstrap overrides.  
+- ✅ Applied `!important` in CSS and removed borders.  
+
+### 🐞 Issue 5: Score Not Resetting on Restart  
+- Score increased correctly but didn't reset to `0`.  
+- Confirmed issue by clicking Start multiple times.  
+- ✅ Updated `resetGame(true)` to reset the score.  
+
+### 🐞 Issue 6: Numbers Not Shuffling on Reset (Unfixed)  
+- Number and word buttons stay in the same order.  
+- Need to correctly shuffle on game reset.  
+- Fixed
+## Final testing
+
+# 🛠 JavaScript Testing  
+### **Tool Used:** [JSHint](https://jshint.com/)  
+- **Test Date:** **9 March 2023**  
+- **Tested File(s):** `script.js`  
+- **Purpose:** Ensure there are no syntax errors, unused variables, or bad practices.  
+- **Result:** _()_  
+
 ---
-## Testing
 
-## Bugs Fixes
+## 🎨 CSS Testing  
+### **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
+- **Test Date:** **9 March 2023**  
+- **Tested File(s):** `styles.css`  
+- **Purpose:** Validate CSS for syntax errors and compatibility issues.  
+- **Result:** No errors ![CSS Validator Report](cssvalidatorreport.jpeg)
+---
 
-🐞 - The SweetAlert popup was shifting the game buttons, causing them to disappear or move.  
-⚒️ - The `position: "center"` setting in SweetAlert was affecting the page layout.  
-✅ - Changed the position to `"top"` to prevent it from interfering with the game elements.  
-
-
-## 🔴 Issue 2: Score Button Stacked Below Start Button  
-### **Problem**  
-- After adding the **Score** button, it appeared **below** the **Start** button instead of beside it.  
-- The layout was not as expected.  
-
-### **Testing Process**  
-1. Added a **red border** around the buttons to check their position.  
-2. Discovered that both buttons were **outside** the intended container.  
-
-### **Fix Implemented**  
-- Adjusted the **HTML structure** to ensure both buttons were inside the correct Bootstrap grid layout.  
-
-### **Final Verification**  
-✅ The `Start` and `Score` buttons are now **side by side**.  
+## 🏗 HTML Validation  
+### **Tool Used:** [W3C Markup Validator](https://validator.w3.org/)  
+- **Test Date:** **9 March 2023**  
+- **Tested File(s):** `index.html`  
+- **Purpose:** Ensure semantic correctness and accessibility compliance.  
+- **Result:** No errors ![HTML Validator Report](htmlvalidatorreport.jpeg)
 
 ---
 
-## 🔴 Issue 3: Styling Lost After HTML Changes  
-### **Problem**  
-- After modifying the **HTML** to fix button alignment, **all styling changed unexpectedly**.  
+## 🚀 Performance Testing (Lighthouse Report)  
+### **Tool Used:** [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)  
+- **Test Date:** **9 March 2023**  
+- **Pages Tested:**  
+  - 🏠 **Homepage (`index.html`)**  
+  
 
-### **Testing Process**  
-1. Inspected the **CSS** to check if the styles were still being applied.  
-2. Verified the **Bootstrap** integration to ensure it was still loading.  
-
-### **Fix Implemented**  
-- Reapplied the **Bootstrap CDN** to ensure styles were not missing.  
-- Checked **CSS file order** to make sure custom styles loaded **after Bootstrap**.  
-
-### **Final Verification**  
-✅ Bootstrap styles were **restored** and applied correctly.  
-
---4
-
-## 🔴 Issue 4: Button Colors & Borders Not Matching  
-### **Problem**  
-- The `Start` and `Score` buttons did **not have the same color** after Bootstrap was reapplied.  
-- Borders appeared around the buttons due to Bootstrap’s default styling.  
-
-### **Testing Process**  
-1. Manually set the **background color** to check if the CSS was working.  
-2. Used **DevTools** to inspect and identify Bootstrap overrides.  
-
-### **Fix Implemented**  
-- Used `!important` in CSS to **override Bootstrap styles**.  
-- Removed unwanted **borders** applied by Bootstrap.  
-
-### **Final Verification**  
-✅ Buttons now **match in color and styling**.  
-✅ Borders are **removed** for a clean look.  
+### **Lighthouse Metrics:**  
+| **Category**  | **Score** (0-100) |
+|--------------|-----------------|
+| **Performance**  | _(99)_  |
+| **Accessibility**  | _(100)_  |
+| **Best Practices**  | _(100)_  |
+| **SEO**  | _(90)_  |
 
 
-### **Issue 5:**  
-The score was increasing correctly but did not reset to `0` when starting a new game.  
 
-### **Testing:**  
-Clicked the **Start** button multiple times and confirmed the score persisted instead of resetting.  
-
-### **Fix:**  
-Updated `resetGame(true)` to reset `score = 0` and update the UI, then ensured the **Start** button calls `resetGame(true)`. 🚀  
-
+## ✅ Screen Reader Accessibility Test  
+**Tested with:** Windows Narrator  
+**Result:** All buttons, labels, and interactive elements were read correctly.  
+**Fixes Needed:** None – ARIA labels and navigation work as expected.  
 
 ## 📌 Deployment  
 The game will be deployed on **GitHub Pages**. Follow these steps to run it locally:  
+
+## 🎓 Credits & Resources  
+
+### 🙌 Special Thanks  
+A huge **thank you** to my mentor **Richard Wells** for his guidance, support, and invaluable feedback throughout this project.  
+
+### 📚 Learning Resources  
+Throughout this project, I referred to the following resources to improve my understanding of **JavaScript, HTML, CSS, and UI design**:  
+
+- [W3C Schools](https://www.w3schools.com/) – General **HTML, CSS, and JavaScript** lessons.  
+- [MDN Web Docs](https://developer.mozilla.org/) – In-depth **JavaScript** documentation.  
+- [JavaScript.info](https://javascript.info/) – Advanced JavaScript concepts and tutorials.  
+- [Slack Community](https://slack.com/) – Peer discussions and troubleshooting help.  
+
+### 🛠 Tools & Libraries Used  
+- [SweetAlert2](https://sweetalert2.github.io/) – Custom **pop-up alerts** for game interactions.  
+- [Bootstrap](https://getbootstrap.com/) – Responsive **button styling** and layout design.  
+- [Google Fonts](https://fonts.google.com/) – **Comic Neue** font for a playful UI.  
+- [CSS Keyframes & Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS) – Used for **animations and responsiveness**.  
 
 

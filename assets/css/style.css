@@ -1,0 +1,273 @@
+*
+body {
+  font-family: "comic neue", sans-serif;
+  background: linear-gradient(135deg, hwb(46 0% 0%), #ff6347, #0a0771);
+  text-align: center;
+  font-weight: bold;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background: none;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 120px;
+  width: 100%;
+  max-width: 100% !important;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  position: fixed; /* Keeps it at the top */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Ensures no unwanted spacing */
+  z-index: 1000; /* Keeps it above other elements */
+}
+
+.game-container {
+  margin-top: 300px !important; /* Adjust based on title height */
+  padding-top: 20px; /* Ensures spacing */
+  width: 100%;
+  text-align: center;
+}
+#start-restart {
+  background: #ffcc00 !important;
+  border-radius: 50px;
+  border: none !important;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+#score-container {
+  background: #1bf856 !important;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 120px;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  border: none;
+}
+h2 {
+  color: #26095f;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+h3 {
+  color: #092d53;
+  font-size: 2rem;
+}
+button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  min-width: 100px;
+  border-radius: 50px !important;
+  background: #ffcc00 !important;
+  color: #481b73;
+  border: none !important;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.clicked {
+  background-color: #7692ef !important;
+}
+#number-buttons button,
+#word-buttons button {
+  margin: 10px;
+  color: #000 !important;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-success-popup {
+  background: linear-gradient(135deg, #4caf50, #8bc34a) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 10px !important;
+  width: 200px !important;
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  transform: translateX(0) !important;
+}
+.custom-error-popup {
+  background: linear-gradient(135deg, #ff3d00, #ff6d00) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 15px !important;
+  width: 250px !important;
+  position: fixed !important;
+  top: 80px !important;
+  right: 20px !important;
+  left: auto !important;
+  transform: translateX(0) !important;
+}
+.custom-popup-title {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  font-family: "Comic Neue", cursive !important;
+}
+.custom-popup-button {
+  background: #ffcc00 !important;
+  color: #333 !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  padding: 5px 15px !important;
+}
+@keyframes pop-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+.pop-out {
+  animation: pop-out 1.5s ease-in-out forwards;
+}
+
+
+@media (max-width: 768px) {
+  /* Stack the Start button and Score vertically */
+  .container.d-flex {
+    flex-direction: column;
+    gap: 10px; /* Adds spacing between elements */
+    position:sticky !important;
+}
+
+/* Center the score container and make it full-width */
+#score-container {
+    width: 100%; /* Makes it span the full width */
+    max-width: 100px; /* Prevents it from getting too big */
+}
+
+/* Ensure the button is centered and full width */
+#start-restart {
+    width: 100%;
+    max-width: 100px;
+}
+}
+
+
+ /* h2 {
+    font-size: 1.2rem; /* Smaller heading 
+    margin:  0; /* Reduce margin 
+  
+
+  h3 {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  button {
+    font-size: 1rem; /* Reduce button text size 
+    padding: 10px 15px;
+    min-width: 50px;
+  }*/
+
+   #number-buttons button,
+  #word-buttons button {
+      font-size: 0.5rem; /* Smaller text */
+    width: 35px !important; /* Smaller width */
+    height: 35px !important; /* Smaller height */
+    padding: 1px;
+    margin: 0;
+  
+    }
+   /*  .game-container {
+      position: relative !important; /* Ensures it flows naturally */
+    /*  width: 90%; /* Reduces width */
+     /* max-width: 320px; /* Ensures it doesn't get too big */
+      /*height: auto; /* Prevents fixed height issues */
+      /*max-height: 500px; /* Limits height */
+      /*padding: 10px; /* Adds some spacing */
+      /*margin: 20px auto; /* Centers the container */
+      /*overflow-y: auto; /* Enables scrolling if needed */
+   
+    
+ 
+  
+/* Medium Screens: Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+  .container {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1.7rem;
+    padding: 12px 18px;
+    min-width: 90px;
+  }
+
+  #number-buttons button,
+  #word-buttons button {
+    font-size: 1.7rem;
+    width: 90px;
+    height: 90px;
+  }
+
+  .game-container {
+    position: absolute; /* Fixes it to bottom */
+    
+  }
+}
+
+
+/*  Large Screens: Desktop (Above 900px) */
+@media (min-width: 901px) {
+  .container {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 15px 20px;
+    min-width: 100px;
+  }
+
+  #number-buttons button,
+  #word-buttons button {
+    font-size: 2rem;
+    width: 100px;
+    height: 100px;
+  }
+}

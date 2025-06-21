@@ -177,24 +177,6 @@ button {
     width: 100%;
     max-width: 100px;
 }
-}
-
-
- /* h2 {
-    font-size: 1.2rem; /* Smaller heading 
-    margin:  0; /* Reduce margin 
-  
-
-  h3 {
-    font-size: 1rem;
-    margin: 5px 0;
-  }
-
-  button {
-    font-size: 1rem; /* Reduce button text size 
-    padding: 10px 15px;
-    min-width: 50px;
-  }*/
 
    #number-buttons button,
   #word-buttons button {
@@ -205,19 +187,9 @@ button {
     margin: 0;
   
     }
-   /*  .game-container {
-      position: relative !important; /* Ensures it flows naturally */
-    /*  width: 90%; /* Reduces width */
-     /* max-width: 320px; /* Ensures it doesn't get too big */
-      /*height: auto; /* Prevents fixed height issues */
-      /*max-height: 500px; /* Limits height */
-      /*padding: 10px; /* Adds some spacing */
-      /*margin: 20px auto; /* Centers the container */
-      /*overflow-y: auto; /* Enables scrolling if needed */
+  }
    
-    
  
-  
 /* Medium Screens: Tablets (max-width: 900px) */
 @media (max-width: 900px) {
   .container {
@@ -242,10 +214,12 @@ button {
   }
 
   .game-container {
-    position: absolute; /* Fixes it to bottom */
-    
-  }
+    position: relative; 
+     overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Prevent it from overflowing screen */
 }
+   }
+
 
 
 /*  Large Screens: Desktop (Above 900px) */

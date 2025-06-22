@@ -153,7 +153,7 @@ This project is an **interactive learning game** that helps users match numbers 
 - Need to correctly shuffle on game reset.  
 - Fixed
 ## Final testing
-## 🔄 Retesting after changes
+### 🔄 Retesting after changes
 
 - Fixed shuffle logic — tested correct matching and score updates
 - Fixed responsive scrolling — tested on Nest Hub 1024x600
@@ -197,20 +197,29 @@ Tested on:
 
 ## 🚀 Performance Testing (Lighthouse Report)  
 ### **Tool Used:** [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)  
-- **Test Date:** **9 March 2023**  
+- **Test Date:** **22 june 2025**  
 - **Pages Tested:**  
   - 🏠 **Homepage (`index.html`)**  
   
+### Lighthouse Metrics: desktop
 
-### **Lighthouse Metrics:**  
 | **Category**  | **Score** (0-100) |
-|--------------|-----------------|
-| **Performance**  | _(99)_  |
-| **Accessibility**  | _(100)_  |
-| **Best Practices**  | _(100)_  |
-| **SEO**  | _(90)_  |
+|--------------|-------------------|
+| **Performance**  | 99 |
+| **Accessibility**  | 100 |
+| **Best Practices**  | 100 |
+| **SEO**  | 90 |
 
+### Lighthouse Metrics: mobile
 
+| **Category**  | **Score** (0-100) |
+|--------------|-------------------|
+| **Performance**  | 80-89 |
+| **Accessibility**  | 100 |
+| **Best Practices**  | 100 |
+| **SEO**  | 90 |
+Note: Mobile Lighthouse score varies due to Bootstrap CSS and SweetAlert2 being loaded from CDN — tested in Incognito, no blocking errors found.
+```
 
 ## ✅ Screen Reader Accessibility Test  
 **Tested with:** Windows Narrator  

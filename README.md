@@ -95,9 +95,9 @@ This project is an **interactive learning game** that helps users match numbers 
 
 ## 🗺 Wireframes & Mockups
 
-![Wireframe](assets/screenshots/wireframe/desktop.png.PNG)
-![Wireframe](assets/screenshots/wireframe/wireframe2.png.PNG)
-![Wireframe](assets/screenshots/wireframe/mobile.png.PNG)
+![Wireframe](assets/screenshots/wireframe/desktop.PNG)
+![Wireframe](assets/screenshots/wireframe/wireframe2.PNG)
+![Wireframe](assets/screenshots/wireframe/mobile.PNG)
 
 
 ## 📁 Folder Structure
@@ -150,13 +150,22 @@ Math-Word-Match-Game/
 - Need to correctly shuffle on game reset.  
 - Fixed
 ## Final testing
+## 🔄 Retesting after changes
+
+- Fixed shuffle logic — tested correct matching and score updates
+- Fixed responsive scrolling — tested on Nest Hub 1024x600
+- Manual testing on Desktop, Mobile, and Tablet — all functional
+- HTML, CSS, and JS validated — no errors
+- Responsive test passed (ami.responsivedesign.is)
+- Lighthouse Performance: 99, Accessibility: 100
+
 
 # 🛠 JavaScript Testing  
 ### **Tool Used:** [JSHint](https://jshint.com/)  
-- **Test Date:** **9 March 2023**  
+- **Test Date:** **22 june 2025**  
 - **Tested File(s):** `script.js`  
 - **Purpose:** Ensure there are no syntax errors, unused variables, or bad practices.  
-- **Result:** _()_  
+- **Result:** ![JS Hint REport](assets/screenshots/jshint-report.png) 
 ## 📱 Responsive Testing  
 Tested on:  
 - Chrome Desktop  
@@ -168,18 +177,18 @@ Tested on:
 
 ## 🎨 CSS Testing  
 ### **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
-- **Test Date:** **9 March 2023**  
+- **Test Date:** **22 june 2025**  
 - **Tested File(s):** `styles.css`  
 - **Purpose:** Validate CSS for syntax errors and compatibility issues.  
-- **Result:** No errors ![CSS Validator Report](cssvalidatorreport.jpeg)
+- **Result:** No errors ![CSS Validator Report](assets/screenshots/validator.w3.css.png)
 ---
 
 ## 🏗 HTML Validation  
 ### **Tool Used:** [W3C Markup Validator](https://validator.w3.org/)  
-- **Test Date:** **9 March 2023**  
+- **Test Date:** **22 june 2025**  
 - **Tested File(s):** `index.html`  
 - **Purpose:** Ensure semantic correctness and accessibility compliance.  
-- **Result:** No errors ![HTML Validator Report](htmlvalidatorreport.jpeg)
+- **Result:** No errors ![HTML Validator Report](assets\screenshots\validator.w3.html.png)
 
 ---
 

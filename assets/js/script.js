@@ -1,4 +1,6 @@
 /* jshint esversion: 6 */
+/* global Swal */
+
 
 // Array of number-word pairs
 const numberPairs = [

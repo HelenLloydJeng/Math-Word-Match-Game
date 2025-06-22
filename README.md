@@ -100,6 +100,7 @@ This project is an **interactive learning game** that helps users match numbers 
 ![Wireframe](assets/screenshots/mobile.PNG)
 
 
+
 ## 📁 Folder Structure
 
 Math-Word-Match-Game/
@@ -111,8 +112,15 @@ Math-Word-Match-Game/
 ├── js/
 │ └── script.js
 └── screenshots/
-  
-```
+├── game-screenshot.png
+├── jshint-report.png
+├── validator.w3.css.png
+├── validator.w3.html.png
+├── desktop.PNG
+├── mobile.PNG
+├── wireframe2.PNG
+
+
 ---
 ## 🛠 Technologies Used  
 - HTML5  
@@ -233,24 +241,38 @@ To run locally:
 👉
 The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Word-Match-Game/)
 
-
 ## 🎓 Credits & Resources  
 
 ### 🙌 Special Thanks  
-A huge **thank you** to my mentor **Richard Wells** for his guidance, support, and invaluable feedback throughout this project.  
+
+- **Richard Wells** (mentor) — for guidance, support, and feedback  
+- **ChatGPT and CoPilot** (OpenAI) — for code review assistance, bug fixing, testing advice, and README editing  
+- Fellow students on **Code Institute Slack Community** — for advice and encouragement  
+
+---
 
 ### 📚 Learning Resources  
-Throughout this project, I referred to the following resources to improve my understanding of **JavaScript, HTML, CSS, and UI design**:  
 
-- [W3C Schools](https://www.w3schools.com/) – General **HTML, CSS, and JavaScript** lessons.  
-- [MDN Web Docs](https://developer.mozilla.org/) – In-depth **JavaScript** documentation.  
-- [JavaScript.info](https://javascript.info/) – Advanced JavaScript concepts and tutorials.  
-- [Slack Community](https://slack.com/) – Peer discussions and troubleshooting help.  
+- [W3Schools](https://www.w3schools.com/) — General HTML, CSS, JavaScript  
+- [MDN Web Docs](https://developer.mozilla.org/) — Advanced JavaScript, HTML, CSS  
+- [JavaScript.info](https://javascript.info/) — In-depth JavaScript tutorials  
+- [Slack Community](https://slack.com/) — Peer discussions and troubleshooting  
+- [ChatGPT (OpenAI)](https://chat.openai.com/) — for additional learning support  
+
+---
 
 ### 🛠 Tools & Libraries Used  
-- [SweetAlert2](https://sweetalert2.github.io/) – Custom **pop-up alerts** for game interactions.  
-- [Bootstrap](https://getbootstrap.com/) – Responsive **button styling** and layout design.  
-- [Google Fonts](https://fonts.google.com/) – **Comic Neue** font for a playful UI.  
-- [CSS Keyframes & Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS) – Used for **animations and responsiveness**.  
+
+- [SweetAlert2](https://sweetalert2.github.io/) — Custom pop-up alerts  
+- [Bootstrap](https://getbootstrap.com/) — Responsive styling and layout  
+- [Google Fonts](https://fonts.google.com/) — Comic Neue font  
+- [CSS Keyframes & Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS) — For animations and responsiveness  
+- [Git & GitHub](https://github.com/) — Version control and deployment  
+
+---
+
+_This project was created as part of the **Diploma in Full Stack Software Development** with **Code Institute**._
+
+ 
 
 

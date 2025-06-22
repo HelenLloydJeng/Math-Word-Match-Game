@@ -2,7 +2,7 @@
 
 # 📌 Matching Word & Number Game  
 
-![Game Screenshot](assets/screenshots/game-screenshot.png)
+![Game Screenshot](assets/screenshots/game.screenshot.png)
 
 
 ## 📝 Project Objectives  
@@ -102,7 +102,7 @@ This project is an **interactive learning game** that helps users match numbers 
 
 ## 📁 Folder Structure
 
-Math-Word-Match-Game/
+```Math-Word-Match-Game/
 ├── index.html
 ├── README.md
 └── assets/
@@ -111,6 +111,9 @@ Math-Word-Match-Game/
 ├── js/
 │ └── script.js
 └── screenshots/
+    └── wireframe
+
+```
 ---
 ## 🛠 Technologies Used  
 - HTML5  
@@ -178,7 +181,7 @@ Tested on:
 ## 🎨 CSS Testing  
 ### **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
 - **Test Date:** **22 june 2025**  
-- **Tested File(s):** `styles.css`  
+- **Tested File(s):** `assets/css/style.css
 - **Purpose:** Validate CSS for syntax errors and compatibility issues.  
 - **Result:** No errors ![CSS Validator Report](assets/screenshots/validator.w3.css.png)
 ---
@@ -188,7 +191,7 @@ Tested on:
 - **Test Date:** **22 june 2025**  
 - **Tested File(s):** `index.html`  
 - **Purpose:** Ensure semantic correctness and accessibility compliance.  
-- **Result:** No errors ![HTML Validator Report](assets\screenshots\validator.w3.html.png)
+- **Result:** No errors ![HTML Validator Report](assets/screenshots/validator.w3.html.png)
 
 ---
 
@@ -220,9 +223,8 @@ To run locally:
 2️⃣ Open `index.html` in browser or run with Live Server
 3️⃣ **Deployment**  
 👉
-The game is deployed on [GitHub Pages](https://github.com/HelenLloydJeng/Math-Word-Match-Game)  
-
-
+(The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Word-Match-Game/)
+)  
 
 ## 🎓 Credits & Resources  
 

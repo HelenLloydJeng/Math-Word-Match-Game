@@ -2,6 +2,9 @@
 
 # 📌 Matching Word & Number Game  
 
+![Game Screenshot](assets/screenshots/game-screenshot.png)
+
+
 ## 📝 Project Objectives  
 This project is an **interactive learning game** that helps users match numbers (1-20) with their word forms. The game aims to:  
 
@@ -90,6 +93,17 @@ This project is an **interactive learning game** that helps users match numbers 
 - Animations for smoother transitions.  
 - Themed designs (e.g., fun fonts & styles).  
 
+## 📁 Folder Structure
+
+Math-Word-Match-Game/
+├── index.html
+├── README.md
+└── assets/
+├── css/
+│ └── style.css
+├── js/
+│ └── script.js
+└── screenshots/
 ---
 ## 🛠 Technologies Used  
 - HTML5  
@@ -124,7 +138,7 @@ This project is an **interactive learning game** that helps users match numbers 
 - Confirmed issue by clicking Start multiple times.  
 - ✅ Updated `resetGame(true)` to reset the score.  
 
-### 🐞 Issue 6: Numbers Not Shuffling on Reset (Unfixed)  
+### 🐞 Issue 6: Numbers Not Shuffling on Reset (Fixed)  
 - Number and word buttons stay in the same order.  
 - Need to correctly shuffle on game reset.  
 - Fixed
@@ -136,6 +150,12 @@ This project is an **interactive learning game** that helps users match numbers 
 - **Tested File(s):** `script.js`  
 - **Purpose:** Ensure there are no syntax errors, unused variables, or bad practices.  
 - **Result:** _()_  
+## 📱 Responsive Testing  
+Tested on:  
+- Chrome Desktop  
+- Firefox Desktop  
+- iPhone (Safari)  
+- Nest Hub 1024x600 — fixed scrolling issue  
 
 ---
 
@@ -177,9 +197,16 @@ This project is an **interactive learning game** that helps users match numbers 
 **Tested with:** Windows Narrator  
 **Result:** All buttons, labels, and interactive elements were read correctly.  
 **Fixes Needed:** None – ARIA labels and navigation work as expected.  
+---
 
-## 📌 Deployment  
-The game will be deployed on **GitHub Pages**. Follow these steps to run it locally:  
+To run locally:  
+1️⃣ Clone the repository  
+2️⃣ Open `index.html` in browser or run with Live Server
+3️⃣ **Deployment**  
+👉
+The game is deployed on [GitHub Pages](https://github.com/HelenLloydJeng/Math-Word-Match-Game)  
+
+
 
 ## 🎓 Credits & Resources  
 

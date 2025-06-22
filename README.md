@@ -93,6 +93,13 @@ This project is an **interactive learning game** that helps users match numbers 
 - Animations for smoother transitions.  
 - Themed designs (e.g., fun fonts & styles).  
 
+## 🗺 Wireframes & Mockups
+
+![Wireframe](assets/screenshots/wireframe/desktop.png.PNG)
+![Wireframe](assets/screenshots/wireframe/wireframe2.png.PNG)
+![Wireframe](assets/screenshots/wireframe/mobile.png.PNG)
+
+
 ## 📁 Folder Structure
 
 Math-Word-Match-Game/

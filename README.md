@@ -254,6 +254,7 @@ The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Wor
 ### 📚 Learning Resources  
 
 - [W3Schools](https://www.w3schools.com/) — General HTML, CSS, JavaScript  
+- [Code institute] Tutorials (https://learn.codeinstitute.net/ci_program/diwad_v2_9)
 - [MDN Web Docs](https://developer.mozilla.org/) — Advanced JavaScript, HTML, CSS  
 - [JavaScript.info](https://javascript.info/) — In-depth JavaScript tutorials  
 - [Slack Community](https://slack.com/) — Peer discussions and troubleshooting  

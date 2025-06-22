@@ -95,14 +95,14 @@ This project is an **interactive learning game** that helps users match numbers 
 
 ## 🗺 Wireframes & Mockups
 
-![Wireframe](assets/screenshots/wireframe/desktop.PNG)
-![Wireframe](assets/screenshots/wireframe/wireframe2.PNG)
-![Wireframe](assets/screenshots/wireframe/mobile.PNG)
+![Wireframe](assets/screenshots/desktop.PNG)
+![Wireframe](assets/screenshots/wireframe2.PNG)
+![Wireframe](assets/screenshots/mobile.PNG)
 
 
 ## 📁 Folder Structure
 
-```Math-Word-Match-Game/
+Math-Word-Match-Game/
 ├── index.html
 ├── README.md
 └── assets/
@@ -111,8 +111,7 @@ This project is an **interactive learning game** that helps users match numbers 
 ├── js/
 │ └── script.js
 └── screenshots/
-    └── wireframe
-
+  
 ```
 ---
 ## 🛠 Technologies Used  
@@ -181,7 +180,7 @@ Tested on:
 ## 🎨 CSS Testing  
 ### **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
 - **Test Date:** **22 june 2025**  
-- **Tested File(s):** `assets/css/style.css
+- **Tested File(s):** `assets/css/style.css`
 - **Purpose:** Validate CSS for syntax errors and compatibility issues.  
 - **Result:** No errors ![CSS Validator Report](assets/screenshots/validator.w3.css.png)
 ---
@@ -218,8 +217,8 @@ Tested on:
 | **Accessibility**  | 100 |
 | **Best Practices**  | 100 |
 | **SEO**  | 90 |
+
 Note: Mobile Lighthouse score varies due to Bootstrap CSS and SweetAlert2 being loaded from CDN — tested in Incognito, no blocking errors found.
-```
 
 ## ✅ Screen Reader Accessibility Test  
 **Tested with:** Windows Narrator  
@@ -232,8 +231,8 @@ To run locally:
 2️⃣ Open `index.html` in browser or run with Live Server
 3️⃣ **Deployment**  
 👉
-(The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Word-Match-Game/)
-)  
+The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Word-Match-Game/)
+
 
 ## 🎓 Credits & Resources  
 

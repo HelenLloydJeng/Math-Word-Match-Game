@@ -109,7 +109,9 @@ function checkChoices() {
             heightAuto: false, 
             icon: "success",
             title: "Correct!",
+            width:250,
             showConfirmButton: true,
+            timer: 1200,  // ➜ box disappears after 1.2s
             customClass: {
                         title: "custom-popup-title",
             confirmButton: "custom-popup-button",
@@ -120,7 +122,7 @@ function checkChoices() {
                 choiceTwoElement.classList.remove("pop-out");
                 updateScore(1);
                 resetGame();
-            }, 300);
+            }, 1200);
         });
     } else {
         Swal.fire({
@@ -128,7 +130,9 @@ function checkChoices() {
             heightAuto: false, 
             icon: "error",
             title: "Wrong! Try again.",
+             width: 290, 
             showConfirmButton: true,
+             timer: 1200, 
             customClass: {
                 title: "custom-popup-title",
                 confirmButton: "custom-popup-button",

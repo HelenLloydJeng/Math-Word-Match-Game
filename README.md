@@ -6,7 +6,7 @@
 
 
 ## 📝 Project Objectives  
-This project is an **interactive learning game** that helps users match numbers (1-20) with their word forms. The game aims to:  
+This project is an **interactive learning game** that helps users match numbers (1-10) with their word forms. The game aims to:  
 
 - Provide a **fun and engaging way** to reinforce number-word recognition.  
 - Ensure a **responsive, accessible, and user-friendly design**.  
@@ -102,7 +102,7 @@ This project is an **interactive learning game** that helps users match numbers 
 
 
 ## 📁 Folder Structure
-
+```text
 Math-Word-Match-Game/
 ├── index.html
 ├── README.md
@@ -112,7 +112,7 @@ Math-Word-Match-Game/
 ├── js/
 │ └── script.js
 └── screenshots/
-├── game-screenshot.png
+├── game.screenshot.png
 ├── jshint-report.png
 ├── validator.w3.css.png
 ├── validator.w3.html.png
@@ -181,52 +181,7 @@ Tested on:
 - Chrome Desktop  
 - Firefox Desktop  
 - iPhone (Safari)  
-- Nest Hub 1024x600 — fixed scrolling issue  
-
----
-
-## 🎨 CSS Testing  
-### **Tool Used:** [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)  
-- **Test Date:** **22 june 2025**  
-- **Tested File(s):** `assets/css/style.css`
-- **Purpose:** Validate CSS for syntax errors and compatibility issues.  
-- **Result:** No errors ![CSS Validator Report](assets/screenshots/validator.w3.css.png)
----
-
-## 🏗 HTML Validation  
-### **Tool Used:** [W3C Markup Validator](https://validator.w3.org/)  
-- **Test Date:** **22 june 2025**  
-- **Tested File(s):** `index.html`  
-- **Purpose:** Ensure semantic correctness and accessibility compliance.  
-- **Result:** No errors ![HTML Validator Report](assets/screenshots/validator.w3.html.png)
-
----
-
-## 🚀 Performance Testing (Lighthouse Report)  
-### **Tool Used:** [Google Lighthouse](https://developers.google.com/web/tools/lighthouse)  
-- **Test Date:** **22 june 2025**  
-- **Pages Tested:**  
-  - 🏠 **Homepage (`index.html`)**  
-  
-### Lighthouse Metrics: desktop
-
-| **Category**  | **Score** (0-100) |
-|--------------|-------------------|
-| **Performance**  | 99 |
-| **Accessibility**  | 100 |
-| **Best Practices**  | 100 |
-| **SEO**  | 90 |
-
-### Lighthouse Metrics: mobile
-
-| **Category**  | **Score** (0-100) |
-|--------------|-------------------|
-| **Performance**  | 80-89 |
-| **Accessibility**  | 100 |
-| **Best Practices**  | 100 |
-| **SEO**  | 90 |
-
-Note: Mobile Lighthouse score varies due to Bootstrap CSS and SweetAlert2 being loaded from CDN — tested in Incognito, no blocking errors found.
+- Nest - (Dev Op)
 
 ## ✅ Screen Reader Accessibility Test  
 **Tested with:** Windows Narrator  
@@ -234,12 +189,84 @@ Note: Mobile Lighthouse score varies due to Bootstrap CSS and SweetAlert2 being 
 **Fixes Needed:** None – ARIA labels and navigation work as expected.  
 ---
 
-To run locally:  
-1️⃣ Clone the repository  
-2️⃣ Open `index.html` in browser or run with Live Server
-3️⃣ **Deployment**  
+### B) **Structured Testing** (grouped as they suggested)
+
+Replace your “Final testing / Retesting” area with a structured block like this (you can keep your screenshots):
+
+```md
+## ✅ Testing
+
+### 1) Functional Testing
+| Feature | Test | Expected | Result |
+|---|---|---|---|
+| Match logic | Click a number then its word | Correct pair triggers success modal; score +1 | Pass |
+| Wrong pair | Pick mismatched pair | Error modal; selections reset | Pass |
+| Restart | Click “ReStart” | Score resets to 0; buttons reshuffle | Pass |
+| Accessibility | Navigate buttons via keyboard | Focus ring visible; Enter/Space activates | Pass |
+
+### 2) UI/UX + Responsiveness
+- Devices tested: Chrome Desktop, Firefox Desktop, iPhone (Safari), **Nest Hub 1024×600**  
+- **Nest Hub fix:** enabled vertical scroll in game area; sticky full-width header; buttons resized to fit single row.  
+- Screenshots:  
+  - `assets/screenshots/desktop.PNG`  
+  - `assets/screenshots/mobile.PNG`  
+  - `assets/screenshots/wireframe2.PNG`
+
+### 3) Validation
+- **HTML:** W3C Markup Validator — _No errors_  
+  ![HTML Validator Report](assets/screenshots/validator.w3.html.png)
+- **CSS:** W3C CSS Validator — _No errors_  
+  ![CSS Validator Report](assets/screenshots/validator.w3.css.png)
+- **JavaScript:** JSHint — _No critical issues_  
+  ![JSHint Report](assets/screenshots/jshint-report.png)
+
+### 4) Performance (Lighthouse)
+**Desktop**
+| Category | Score |
+|---|---|
+| Performance | 99 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 90 |
+
+**Mobile**
+| Category | Score |
+|---|---|
+| Performance | 80–89 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 90 |
+
+_Notes:_ Mobile performance varies depending on network conditions and Chrome extensions. Tested incognito; CDNs (Bootstrap & SweetAlert2) add a small delay but no blocking errors.
+
+**Deployment**  
 👉
 The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Word-Match-Game/)
+## 🚀 Deployment
+
+### GitHub Pages
+This project is deployed using GitHub Pages.
+
+- **Repository:** https://github.com/HelenLloydJeng/Math-Word-Match-Game  
+- **Live Site:** https://helenlloydjeng.github.io/Math-Word-Match-Game/
+
+**Steps to deploy:**
+1. Push your latest changes to the `main` branch.
+2. In GitHub, go to **Settings → Pages**.
+3. Under **Branch**, select `main` and `/ (root)` and click **Save**.
+4. Wait for Pages to build; your site will be available at the “Live Site” URL above.
+
+### Run Locally
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/HelenLloydJeng/Math-Word-Match-Game.git
+   cd Math-Word-Match-Game
+2. Open index.html directly in your browser or run a local server:
+
+# Python 3
+python -m http.server 5500
+# then open http://localhost:5500
+
 
 ## 🎓 Credits & Resources  
 
@@ -254,7 +281,7 @@ The game is deployed on [GitHub Pages](https://helenlloydjeng.github.io/Math-Wor
 ### 📚 Learning Resources  
 
 - [W3Schools](https://www.w3schools.com/) — General HTML, CSS, JavaScript  
-- [Code institute] Tutorials (https://learn.codeinstitute.net/ci_program/diwad_v2_9)
+- [Code Institute Tutorials](https://learn.codeinstitute.net/ci_program/diwad_v2_9)
 - [MDN Web Docs](https://developer.mozilla.org/) — Advanced JavaScript, HTML, CSS  
 - [JavaScript.info](https://javascript.info/) — In-depth JavaScript tutorials  
 - [Slack Community](https://slack.com/) — Peer discussions and troubleshooting  

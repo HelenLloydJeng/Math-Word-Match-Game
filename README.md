@@ -91,7 +91,13 @@ This project is an **interactive learning game** that helps users match numbers 
 - Dark mode toggle for better readability.  
 - Customizable difficulty (e.g., different number ranges).  
 - Animations for smoother transitions.  
-- Themed designs (e.g., fun fonts & styles).  
+- Themed designs (e.g., fun fonts & styles). 
+
+## 🔭 Future Enhancements
+- Difficulty levels (e.g., 1–20, 1–100)
+- Sound effects toggle
+- Dark mode
+
 
 ## 🗺 Wireframes & Mockups
 
@@ -238,6 +244,14 @@ Replace your “Final testing / Retesting” area with a structured block like t
 | SEO | 90 |
 
 _Notes:_ Mobile performance varies depending on network conditions and Chrome extensions. Tested incognito; CDNs (Bootstrap & SweetAlert2) add a small delay but no blocking errors.
+
+## 🔧 Recent Fixes and Improvements
+- **Responsiveness (Nest Hub 1024×600):** header converted to full-width `container-fluid`, game area now scrolls vertically; removed overlapping and extra top gap.
+- **Button layout:** reduced button size/margins so all 10 fit on one row; added horizontal scroll fallback on very small widths.
+- **Modal alignment:** removed custom fixed positioning; SweetAlert centered, `heightAuto: false` to prevent layout shift.
+- **Folder structure:** consolidated under `assets/` (`assets/css`, `assets/js`, `assets/screenshots`).
+- **Validation:** removed stray/duplicate code; fixed Google Fonts URL; eliminated default body margin to avoid gaps.
+
 
 **Deployment**  
 👉

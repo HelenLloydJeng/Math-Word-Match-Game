@@ -5,12 +5,15 @@ body {
   text-align: center;
   font-weight: bold;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
-.container {
+html, body { margin: 0; padding: 0; }
+
+.game-title, h2.game-title {
+  margin-top: 0;   /* prevents extra space inside the sticky header */
+}
+/* SINGLE definitive header block */
+.site-header {
+  /* visual styles you already had */
   background: none;
   padding: 10px 20px;
   text-align: center;
@@ -18,22 +21,30 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   min-width: 120px;
-  width: 100%;
-  max-width: 100% !important;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 10px 20px rgba(0,0,0,0.2);
   backdrop-filter: blur(10px);
-  position: fixed; /* Keeps it at the top */
-  top: 0; /* Aligns to the top */
-  left: 0; /* Ensures no unwanted spacing */
-  z-index: 1000; /* Keeps it above other elements */
+
+  /* behavior */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* full width when using .container-fluid */
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;  /* optional tidy for full-bleed */
+  padding-right: 0; /* optional tidy */
 }
 
 .game-container {
-  margin-top: 300px !important; /* Adjust based on title height */
+  margin-top: 0; /*reset margin*/
   padding-top: 20px; /* Ensures spacing */
   width: 100%;
   text-align: center;
+   max-height: calc(100vh - 200px);  /* leaveroom for sticky header */
+  overflow-y: auto;                  /* gives vertical scroll when needed */
 }
+
 #start-restart {
   background: #ffcc00 !important;
   border-radius: 50px;
@@ -93,10 +104,10 @@ button {
   margin: 10px;
   color: #000 !important;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 10px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80pxx;
   border-radius: 12px;
   text-align: center;
   display: flex;
@@ -109,23 +120,13 @@ button {
   border-radius: 10px !important;
   padding: 10px !important;
   width: 200px !important;
-  position: fixed !important;
-  top: 20px !important;
-  right: 20px !important;
-  left: auto !important;
-  transform: translateX(0) !important;
-}
+  }
 .custom-error-popup {
   background: linear-gradient(135deg, #ff3d00, #ff6d00) !important;
   color: white !important;
   border-radius: 10px !important;
   padding: 15px !important;
   width: 250px !important;
-  position: fixed !important;
-  top: 80px !important;
-  right: 20px !important;
-  left: auto !important;
-  transform: translateX(0) !important;
 }
 .custom-popup-title {
   font-size: 1.5rem !important;
@@ -157,42 +158,43 @@ button {
   animation: pop-out 1.5s ease-in-out forwards;
 }
 
-
+/* Small screens (phones) */
+/* ========================= */
 @media (max-width: 768px) {
   /* Stack the Start button and Score vertically */
   .container.d-flex {
     flex-direction: column;
     gap: 10px; /* Adds spacing between elements */
-    position:sticky !important;
-}
+  }
 
-/* Center the score container and make it full-width */
-#score-container {
-    width: 100%; /* Makes it span the full width */
-    max-width: 100px; /* Prevents it from getting too big */
-}
-
-/* Ensure the button is centered and full width */
-#start-restart {
+  /* Center the score container and make it full-width */
+  #score-container {
     width: 100%;
     max-width: 100px;
-}
+  }
 
-   #number-buttons button,
+  /* Ensure the button is centered and full width */
+  #start-restart {
+    width: 100%;
+    max-width: 100px;
+  }
+
+  /* Smaller number/word buttons */
+  #number-buttons button,
   #word-buttons button {
-      font-size: 0.5rem; /* Smaller text */
-    width: 35px !important; /* Smaller width */
-    height: 35px !important; /* Smaller height */
+    font-size: 0.5rem;
+    width: 35px !important;
+    height: 35px !important;
     padding: 1px;
     margin: 0;
-  
-    }
   }
-   
- 
-/* Medium Screens: Tablets (max-width: 900px) */
+}
+
+/* ========================== */
+/* 💻 Medium screens (tablets) */
+/* ========================== */
 @media (max-width: 900px) {
-  .container {
+  .game-container {
     font-size: 1rem;
   }
 
@@ -214,17 +216,17 @@ button {
   }
 
   .game-container {
-    position: relative; 
-     overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 80vh; /* Prevent it from overflowing screen */
+    position: relative;
+    overflow-y: auto;   /* Enable vertical scrolling */
+    max-height: 80vh;   /* Prevent it from overflowing screen */
+  }
 }
-   }
 
-
-
-/*  Large Screens: Desktop (Above 900px) */
+/* ============================ */
+/* 🖥 Large screens (desktops)  */
+/* ============================ */
 @media (min-width: 901px) {
-  .container {
+  .game-container {
     font-size: 1.2rem;
   }
 
@@ -243,5 +245,15 @@ button {
     font-size: 2rem;
     width: 100px;
     height: 100px;
+  }
+}
+
+/* ======================================== */
+/* 📟 Special case: 1024×600 (Nest Hub etc) */
+/* ======================================== */
+@media (max-width: 1024px) and (max-height: 700px) {
+  .game-container {
+    max-height: calc(100vh - 220px); /* leave more space for sticky header */
+    overflow-y: auto;
   }
 }

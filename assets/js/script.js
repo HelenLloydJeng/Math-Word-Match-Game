@@ -103,6 +103,7 @@ function checkChoices() {
         choiceOneElement.classList.add("pop-out");
         choiceTwoElement.classList.add("pop-out");
 
+        
         Swal.fire({
             
             position: "center",     // center on all devices

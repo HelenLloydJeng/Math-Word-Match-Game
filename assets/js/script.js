@@ -22,6 +22,13 @@ let choiceOneElement;
 let choiceTwoElement;
 let score = 0;
 
+// cache DOM elements to avoid repeated lookups
+const scoreEl = document.getElementById("score");
+const numberButtonsEl = document.getElementById("number-buttons");
+const wordButtonsEl = document.getElementById("word-buttons");
+const restartBtn = document.getElementById("start-restart");
+
+
 // Shuffle function
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -97,14 +104,15 @@ function checkChoices() {
         choiceTwoElement.classList.add("pop-out");
 
         Swal.fire({
-            position: "top",
+            
+            position: "center",     // center on all devices
+            heightAuto: false, 
             icon: "success",
             title: "Correct!",
             showConfirmButton: true,
             customClass: {
-                popup: "custom-success-popup",
-                title: "custom-popup-title",
-                confirmButton: "custom-popup-button",
+                        title: "custom-popup-title",
+            confirmButton: "custom-popup-button",
             },
         }).then(() => {
             setTimeout(() => {
@@ -116,12 +124,12 @@ function checkChoices() {
         });
     } else {
         Swal.fire({
-            position: "top",
+            position: "center",     // ➜ CHANGE
+            heightAuto: false, 
             icon: "error",
             title: "Wrong! Try again.",
             showConfirmButton: true,
             customClass: {
-                popup: "custom-error-popup",
                 title: "custom-popup-title",
                 confirmButton: "custom-popup-button",
             },
@@ -132,7 +140,7 @@ function checkChoices() {
 // Update score
 function updateScore(points) {
     score += points;
-    document.getElementById("score").textContent = score;
+    scoreEl.textContent = score;
 }
 
 // Reset game
@@ -147,12 +155,12 @@ function resetGame(isNewGame = false) {
 
     if (isNewGame) {
         score = 0;
-        document.getElementById("score").textContent = score;
+       scoreEl.textContent = score;
     }
 
     // Clear buttons
-    document.getElementById("number-buttons").innerHTML = "";
-    document.getElementById("word-buttons").innerHTML = "";
+   numberButtonsEl.innerHTML = "";
+   wordButtonsEl.innerHTML = "";
 
     // Shuffle pairs
     shuffleArray(numberPairs);
@@ -166,7 +174,7 @@ function resetGame(isNewGame = false) {
 }
 
 // Start button
-document.getElementById("start-restart").addEventListener("click", function () {
+restartBtn.addEventListener("click", function () {
     resetGame(true);
 });
 

@@ -68,7 +68,11 @@ function createButtons(containerId, values, type) {
         [elements[i], elements[j]] = [elements[j], elements[i]];
     }
 
-    elements.forEach((button) => container.appendChild(button));
+    
+    const frag = document.createDocumentFragment();
+    elements.forEach((button) => frag.appendChild(button));
+    container.appendChild(frag);
+
 }
 
 // Set choices
@@ -108,6 +112,8 @@ function checkChoices() {
             
             position: "center",     // center on all devices
             heightAuto: false, 
+            scrollbarPadding: false,   // prevent body padding jump
+            allowOutsideClick: false,  //avoids accidental close
             icon: "success",
             title: "Correct!",
             width:250,
@@ -123,12 +129,14 @@ function checkChoices() {
                 choiceTwoElement.classList.remove("pop-out");
                 updateScore(1);
                 resetGame();
-            }, 1200);
+            }, 1300);
         });
     } else {
         Swal.fire({
             position: "center",     // ➜ CHANGE
             heightAuto: false, 
+            scrollbarPadding: false,   // prevent body padding jump
+            allowOutsideClick: false,  //avoids accidental close
             icon: "error",
             title: "Wrong! Try again.",
              width: 290, 

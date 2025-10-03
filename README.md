@@ -168,8 +168,8 @@ Math-Word-Match-Game/
   ![HTML Validator Report](assets/screenshots/validator.w3.html.png)
 - **CSS:** ✔ No errors  
   ![CSS Validator Report](assets/screenshots/validator.w3.css.png)
-- **JavaScript (JSHint):** ✔ No critical issues  
-  ![JSHint Report](assets/screenshots/jshint-report.png)
+- **JavaScript (JSHint):** ✔ No critical issues  retested 3rd October
+  ![JSHint Test](assets/screenshots/jshint_test.jpeg)
 
 ### 4) Performance (Lighthouse)
 **Desktop**
